@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <h1 style="background-color:powderblue;">First p5.js project</h1>
+        <br>
+        <br>
+        <h3 style="background-color:green;">Take Snapshot</h3>
+        <style>
+            .dot {
+            height: 80px;
+            width: 80px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            }
+        </style>
+    </head>
+
+    <body>
+       
+        <script>
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.moveTo(60,60);
+            context.lineTo(700,60);
+            context.stroke();
+
+            context.moveTo(60,60);
+            context.lineTo(60,450);
+            context.stroke();
+
+            context.moveTo(60,450);
+            context.lineTo(750,445);
+            context.stroke();
+
+            context.moveTo(740,450);
+            context.lineTo(740,100);
+            context.stroke();
+            var radius = 50;
+
+            context.beginPath();
+            context.arc(60, 60, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+  
+            context.beginPath();
+            context.arc(740, 60, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+
+            context.beginPath();
+            context.arc(60, 442, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+
+            context.beginPath();
+            context.arc(740, 441, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+
+            var canvas = document.getElementById('canvas');
+            var image = new Image();
+            image.src = 'google-logo.jpg';
+            image.onload = function () {
+                var canvasContext = canvas.getContext('2d');
+                canvasContext.drawImage(image,240,180, 300 , 150);
+      };
+            
+        </script> 
+    
+        <!-- <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </div> -->
+    </body>
+
+</html>
